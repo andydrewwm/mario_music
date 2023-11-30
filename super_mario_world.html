@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Super Mario World</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav>
+		<a href="./index.html">About</a>
+		<button id="expand-menu" onclick=toggleMenu(this)>
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+				<path d="M32 2L0 2" stroke="black" stroke-width="3"/>
+				<path d="M32 14L0 14" stroke="black" stroke-width="3"/>
+				<path d="M32 26L0 26" stroke="black" stroke-width="3"/>
+			</svg>
+		</button>
+		<div id="links">
+			<a href="./super_mario_world.html">Super Mario World</a>
+			<a href="./coming_soon.html">Coming Soon...</a>
+		</div>
+	</nav>
+	<main id="smw">
+		<h1>Super Mario World</h1>
+
+		<h2>Yoshi</h2>
+		<p>Super Mario World was the first game in the series to introduce Mario's iconic companion Yoshi! Being the mighty dinosaur he is, Yoshi lets Mario ride on his back as he marches onward to rescue Princess Peach.</p>
+		<p>Riding on Yoshi changes how the player will interact with their environment. Whether they choose to play more risky or cautiously is up to them. Regardless, they will approach a level differently than they would.</p>
+		<p>What I find brilliant about Super Mario World's music is its ability to convey a difference in gameplay with or without Yoshi through its music. Why explain it to you when I can SHOW you the cool trick Nintendo uses.</p>
+
+		<figure id="overworld">
+			<button class="mario" onclick=toggleOverworld(this)>
+				Mario
+				<img src="./images/smw_mario.png">
+			</button>
+			<button id="stop" onclick=stopMusic()>Stop</button>
+			<button class="yoshi" onclick=toggleOverworld(this)>
+				Yoshi
+				<img src="./images/smw_mario_and_yoshi.png">
+			</button>
+		</figure>
+
+	</main>
+	<script src="./js/navigation.js"></script>
+	<script src="./js/super_mario_world.js"></script>
+</body>
+</html>

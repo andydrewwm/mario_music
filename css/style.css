@@ -1,0 +1,192 @@
+@font-face {
+    font-family: pressStart2P;
+    src: url(../fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+    font-family: vt323;
+    src: url(../fonts/VT323/VT323-Regular.ttf);
+}
+
+:root {
+    --orange: #CF612E
+}
+
+*:focus {
+    border: 2px solid white;
+}
+
+body {
+    font-family: pressStart2P;
+
+    background-color: #416BF6;
+}
+
+nav {
+    overflow: hidden;
+    position: relative;
+
+    background-color: var(--orange);
+}
+
+nav a {
+    display: flex;
+    text-align: left;
+    align-self: center;
+
+    padding: 1.25rem;
+
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-shadow: 0 0.175rem 0 #000;
+
+    color: #F9DECB;
+}
+nav div#links {
+    display: none;
+}
+nav a:hover, nav a:focus {
+    background-color: #F9DECB;
+    color: var(--orange);
+}
+
+nav button#expand-menu {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 4rem;
+    height: 4rem;
+
+    padding: 1rem;
+
+    text-align: center;
+
+    background-color: #F9DECB;
+}
+
+nav a#expand-menu:active svg * {
+    stroke: white;
+}
+
+main > * {
+    margin: 1.25rem auto;
+    width: 20rem;
+}
+
+h1 {
+    padding: 0.5rem 0;
+
+    align-self: center;
+    text-align: center;
+
+
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-shadow: 0 0.175rem 0 #000;
+
+    color: #F9DECB;
+    background-color: var(--orange);
+}
+
+p {
+    display: block;
+    text-align: left;
+
+    font-family: vt323;
+    font-size: 1.25rem;
+    font-weight: 400;
+
+    color: #FFFFFF;
+}
+
+/* SUPER MARIO WORLD */
+
+main#smw > p {
+    background-color: black;
+    padding: 1em;
+    line-height: 1.5em;
+}
+
+main#sw > h1 {
+    text-shadow: -0.175rem 0 black, 0 0.175rem black, 0.175rem 0 black, 0 -0.175rem black;
+}
+
+@keyframes scrollLevel {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+.animateLevel {
+    animation: scrollLevel 31s ease-in-out 1;
+}
+
+h1 {
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+figure#overworld {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    height: 311px;
+    background-color: green;
+    background-image: url("../images/SuperMarioWorldMap04-copy.png");
+    background-position: left;
+    background-repeat: no-repeat;
+
+    border: 0.2em solid black;
+}
+
+figure > button {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 0.5em;
+    align-items: center;
+    justify-items: center;
+
+    padding: 0.25em;
+    border: 2px dotted #F6C286;
+
+    color: white;
+    text-decoration: solid;
+    text-shadow: -0.15rem 0 black, 0 0.15rem black, 0.15rem 0 black, 0 -0.15rem black;
+    /* text-shadow: 0 0.125rem 0 #000; */
+}
+figure > button:hover, figure > button:focus {
+    background-color: rgba(246, 194, 134, 0.5);
+    border: 2px solid #F6C286;;
+}
+
+button.mario > img {
+    display: block;
+    height: 5rem;
+}
+
+button#stop {
+    font-size: 1.5em;
+    text-shadow: 0 0.175rem 0 #000;
+    display: block;
+    grid-column: 2 / 3;
+}
+
+button.yoshi > img {
+    display: block;
+    height: 5rem;
+}
+
+/* desktop */
+@media only screen and (min-width: 600px) {
+    main > * {
+        width: 35rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    main > * {
+        width: 50rem;
+    }
+}
