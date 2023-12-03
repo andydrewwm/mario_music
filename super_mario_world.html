@@ -24,23 +24,69 @@
 	</nav>
 	<main id="smw">
 		<h1>Super Mario World</h1>
+		<img src="./images/smw_cover_art.jpg" alt="Cover art for the game Super Mario World">
 
-		<h2>Yoshi</h2>
 		<p>Super Mario World was the first game in the series to introduce Mario's iconic companion Yoshi! Being the mighty dinosaur he is, Yoshi lets Mario ride on his back as he marches onward to rescue Princess Peach.</p>
 		<p>Riding on Yoshi changes how the player will interact with their environment. Whether they choose to play more risky or cautiously is up to them. Regardless, they will approach a level differently than they would.</p>
-		<p>What I find brilliant about Super Mario World's music is its ability to convey a difference in gameplay with or without Yoshi through its music. Why explain it to you when I can SHOW you the cool trick Nintendo uses.</p>
+		<p>What I find brilliant about Super Mario World's music is its ability to convey a difference in gameplay through its music. Why explain it to you when I can SHOW you what I mean! Try clicking on Mario or Yoshi in the figure below (make sure your sound is on)!</p>
+
 
 		<figure id="overworld">
-			<button class="mario" onclick=toggleOverworld(this)>
+			<button class="mario" onclick=toggleMusic(this)>
 				Mario
-				<img src="./images/smw_mario.png">
+				<img src="./images/smw_mario.png" alt="Super Mario">
 			</button>
-			<button id="stop" onclick=stopMusic()>Stop</button>
-			<button class="yoshi" onclick=toggleOverworld(this)>
+			<button id="stop" onclick=stopMusic(this)>Stop</button>
+			<button class="yoshi" onclick=toggleMusic(this)>
 				Yoshi
-				<img src="./images/smw_mario_and_yoshi.png">
+				<img src="./images/smw_mario_and_yoshi.png" alt="Super Mario riding on Yoshi">
 			</button>
 		</figure>
+
+		<p>When you click on either character, the muusic that plays is what a player would hear in game when they are playing with or without Yoshi. Did you try clicking Mario, and then Yoshi? Or Yoshi first, and then Mario? You should be able to hear extra drums playing in the music whenever Yoshi is chosen, and less when it is just Mario!</p>
+		<p>Since different level types have different music, there are more variations of musical effect. I have included more examples of how the music will change with and without Yoshi for your enjoyment, so click away!</p>
+
+		<figure id="athletic">
+			<button class="mario" onclick=toggleMusic(this)>
+				Mario
+				<img src="./images/smw_mario.png" alt="Super Mario">
+			</button>
+			<button id="stop" onclick=stopMusic(this)>Stop</button>
+			<button class="yoshi" onclick=toggleMusic(this)>
+				Yoshi
+				<img src="./images/smw_mario_and_yoshi.png" alt="Super Mario riding on Yoshi">
+			</button>
+		</figure>
+
+		<p>This next one is my least favorite. I always found water levels to be the slowest and most annoying.</p>
+
+		<figure id="underwater">
+			<button class="mario" onclick=toggleMusic(this)>
+				Mario
+				<img src="./images/smw_mario.png" alt="Super Mario">
+			</button>
+			<button id="stop" onclick=stopMusic(this)>Stop</button>
+			<button class="yoshi" onclick=toggleMusic(this)>
+				Yoshi
+				<img src="./images/smw_mario_and_yoshi.png" alt="Super Mario riding on Yoshi from Super Mario World">
+			</button>
+		</figure>
+
+		<p>Oooooo here comes the best one! So dissonant and mysterious...</p>
+
+		<figure id="underground">
+			<button class="mario" onclick=toggleMusic(this)>
+				Mario
+				<img src="./images/smw_mario.png" alt="Super Mario">
+			</button>
+			<button id="stop" onclick=stopMusic(this)>Stop</button>
+			<button class="yoshi" onclick=toggleMusic(this)>
+				Yoshi
+				<img src="./images/smw_mario_and_yoshi.png" alt="Super Mario riding on Yoshi">
+			</button>
+		</figure>
+
+		<p>After listening to each track, did you happen to notice how every one of these tracks has the same melody? They are each arranged differently, but they are more similar than you may have initally thought. Don't believe me? Listen to them again!</p>
 
 	</main>
 	<script src="./js/navigation.js"></script>

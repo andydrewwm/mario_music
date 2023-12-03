@@ -102,43 +102,62 @@ p {
 }
 
 /* SUPER MARIO WORLD */
-
+main#smw > img:first-of-type {
+    display: block;
+    border: 0.2em solid black;
+}
 main#smw > p {
     background-color: black;
     padding: 1em;
     line-height: 1.5em;
 }
 
-main#sw > h1 {
-    text-shadow: -0.175rem 0 black, 0 0.175rem black, 0.175rem 0 black, 0 -0.175rem black;
-}
-
 @keyframes scrollLevel {
     0% { background-position: left; }
     100% { background-position: right; }
 }
-
-.animateLevel {
-    animation: scrollLevel 31s ease-in-out 1;
+.animate-overworld {
+    animation: scrollLevel 90s ease-in-out 1;
+}
+.animate-athletic {
+    animation: scrollLevel 83s ease-in-out 1;
+}
+.animate-underwater {
+    animation: scrollLevel 104s ease-in-out 1;
+}
+.animate-underground {
+    animation: scrollLevel 97s ease-in-out 1;
 }
 
-h1 {
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-}
-
-figure#overworld {
+main#smw > figure {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
 
     height: 311px;
-    background-color: green;
-    background-image: url("../images/SuperMarioWorldMap04-copy.png");
     background-position: left;
     background-repeat: no-repeat;
 
     border: 0.2em solid black;
+}
+
+main#smw > figure#overworld {
+    background-color: green;
+    background-image: url("../images/smw_overworld_level.png");
+}
+main#smw > figure#athletic {
+    background-color: brown;
+    background-image: url("../images/smw_athletic_level.png");
+}
+main#smw > figure#underwater {
+    height: 288px;
+    background-color: blue;
+    background-image: url("../images/smw_underwater_level.png");
+}
+main#smw > figure#underground {
+    background-color: darkslategrey;
+    background-image: url("../images/smw_underground_level.png");
 }
 
 figure > button {
@@ -154,7 +173,6 @@ figure > button {
     color: white;
     text-decoration: solid;
     text-shadow: -0.15rem 0 black, 0 0.15rem black, 0.15rem 0 black, 0 -0.15rem black;
-    /* text-shadow: 0 0.125rem 0 #000; */
 }
 figure > button:hover, figure > button:focus {
     background-color: rgba(246, 194, 134, 0.5);
@@ -168,7 +186,6 @@ button.mario > img {
 
 button#stop {
     font-size: 1.5em;
-    text-shadow: 0 0.175rem 0 #000;
     display: block;
     grid-column: 2 / 3;
 }
