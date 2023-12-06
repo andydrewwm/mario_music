@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<a id="skip" href="#about">Skip to Main Content</a>
 	<nav>
 		<a href="./index.html">About</a>
 		<button id="expand-menu" onclick=toggleMenu(this)>
@@ -22,17 +23,19 @@
 			<a href="./coming_soon.html">Coming Soon...</a>
 		</div>
 	</nav>
-	<main>
+	<main id="about">
 		<h1>About</h1>
 
 		<p>I made this website while taking PAT 305 (Video Game Music) at the University of Michigan. This course inspired me to go back and listen closely to the soundtracks of my favorite Mario games.</p>
 		<p>Thus, my goal with this website is to present the audio effects used in Mario games that make their sound so fun and interactive. I hope you enjoy!</p>
 		<p>By Andrew Wilks-Millard</p>
 
-		<h1>Games</h1>
+		<h1>Supported Games</h1>
 		<ul>
-			<li><a href="./super_mario_world.html">Super Mario World</a></li>
-			<li><a href="./coming_soon.html">Coming Soon...</a></li>
+			<li><a href="./super_mario_world.html"><img src="./images/smw_cover_art.jpg" alt="Super Mario World"></a></li>
+			<li><a href="./coming_soon.html"><img class="under-construction" src="./images/yoshis_island_cover_art.jpg" alt="Super Mario World 2: Yoshi's Island"></a></li>
+			<li><a href="./coming_soon.html"><img class="under-construction" src="./images/super_mario_3d_world_cover_art.jpg" alt="Super Mario 3D World"></a></li>
+			<li><a href="./coming_soon.html"><img class="under-construction" src="./images/super_mario_bros_wonder_cover_art.jpg" alt="Super Mario Bros. Wonder"></a></li>
 		</ul>
 	</main>
 	<script src="js/navigation.js"></script>

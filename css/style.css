@@ -9,11 +9,18 @@
 }
 
 :root {
-    --orange: #CF612E
+    --orange: #CF612E;
+    --light-orange: #F9DECB;
 }
 
-*:focus {
-    border: 2px solid white;
+#skip {
+    position: absolute;
+    left: -500px;
+}
+#skip:focus {
+    position: relative;
+    left: 0px;
+    background-color: var(--light-orange);
 }
 
 body {
@@ -40,13 +47,13 @@ nav a {
     text-decoration: none;
     text-shadow: 0 0.175rem 0 #000;
 
-    color: #F9DECB;
+    color: var(--light-orange);
 }
 nav div#links {
     display: none;
 }
 nav a:hover, nav a:focus {
-    background-color: #F9DECB;
+    background-color: var(--light-orange);
     color: var(--orange);
 }
 
@@ -62,8 +69,9 @@ nav button#expand-menu {
     padding: 1rem;
 
     text-align: center;
-
-    background-color: #F9DECB;
+}
+nav button#expand-menu:hover, nav button#expand-menu:focus {
+    background-color: var(--light-orange);
 }
 
 nav a#expand-menu:active svg * {
@@ -86,7 +94,7 @@ h1 {
     text-decoration: none;
     text-shadow: 0 0.175rem 0 #000;
 
-    color: #F9DECB;
+    color: var(--light-orange);
     background-color: var(--orange);
 }
 
@@ -99,6 +107,27 @@ p {
     font-weight: 400;
 
     color: #FFFFFF;
+}
+
+main > ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+main > ul > li {
+    display: block;
+}
+
+.under-construction {
+    filter: grayscale(95%);
+}
+
+main > ul > li > a > img {
+    border: 0.5em solid var(--orange);
+}
+main > ul > li:hover > a > img, main > ul > li > a:focus > img {
+    border: 0.25em solid var(--light-orange);
 }
 
 /* SUPER MARIO WORLD */
@@ -200,10 +229,18 @@ button.yoshi > img {
     main > * {
         width: 35rem;
     }
+
+    main > ul {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media only screen and (min-width: 992px) {
     main > * {
         width: 50rem;
+    }
+
+    main > ul {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
